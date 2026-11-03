@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="site-name" href="/">
+      Dr. Bhargav Reddy Isanaka
+    </a>
+
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/research/">Research</a>
+      <a href="/publications/">Publications</a>
+      <a href="/projects/">Projects</a>
+      <a href="/experience/">Experience</a>
+
+      <div class="dropdown">
+        <span class="dropdown-label">More ▾</span>
+        <div class="dropdown-content">
+          <a href="/awards/">Awards & Achievements</a>
+          <a href="/editorial-services/">Editorial Services</a>
+          <a href="/research-group/">Research Group</a>
+          <a href="/gallery/">Gallery</a>
+        </div>
+      </div>
+
+      <a href="/contact/">CV & Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+<footer class="site-footer">
+  <h3>Dr. Bhargav Reddy Isanaka</h3>
+  <p>Research Fellow | University of Southampton</p>
+
+  <div class="footer-links">
+    <a href="https://scholar.google.com/citations?user=JaDDQjgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    <a href="https://www.researchgate.net/" target="_blank">ResearchGate</a>
+    <a href="https://orcid.org/" target="_blank">ORCID</a>
+  </div>
+
+  <p class="copyright">
+    © {{ now.Year }} Dr. Bhargav Reddy Isanaka
+  </p>
+</footer>
+
+</body>
+</html>
