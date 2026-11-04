@@ -1,46 +1,62 @@
 
 {{ define "main" }}
 
+
 <!-- HERO SECTION -->
 <section class="section">
-  <div class="section-inner" style="display:grid; grid-template-columns: 1.5fr 1fr; gap:40px; align-items:center;">
+  <div class="section-inner" style="display:flex; flex-wrap:wrap; gap:45px; align-items:center;">
 
-    <div>
-      <p style="color:var(--secondary); font-weight:600;">
-        POSTDOCTORAL RESEARCHER | UNIVERSITY OF SOUTHAMPTON
-      </p>
-
-      <h1 style="font-size:42px; line-height:1.2; margin:15px 0;">
-        Dr. Bhargav Reddy Isanaka
-      </h1>
-
-      <h2 style="font-size:22px; font-weight:500; margin:0 0 20px;">
-        Research Fellow in Computational Mechanics and Advanced Materials
-      </h2>
-
-      <p>
-        I am a Civil Engineering researcher working at the intersection of
-        architected materials, computational solid mechanics and structural
-        engineering. My research focuses on developing lightweight,
-        multifunctional structures through numerical modelling,
-        experimentation and data-driven approaches.
-      </p>
-
-      <a class="button" href="/about/">Explore My Profile</a>
-      <a class="button" href="/research/" style="margin-left:10px;">
-        Research Interests
-      </a>
-    </div>
-
-    <div style="text-align:center;">
+    <!-- PROFILE PHOTO -->
+    <div style="flex:0 0 260px; text-align:center;">
       <img
         src="/images/profile.jpg"
         alt="Dr. Bhargav Reddy Isanaka"
-        class="profile-image"
-        style="width:260px; height:310px;"
+        style="width:250px; height:300px; object-fit:cover; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,0.12);"
       >
     </div>
 
+    <!-- INTRODUCTION -->
+    <div style="flex:1; min-width:280px;">
+
+      <p style="color:var(--secondary); font-weight:700; letter-spacing:1px; font-size:14px;">
+        RESEARCH FELLOW | UNIVERSITY OF SOUTHAMPTON
+      </p>
+
+      <h1 style="font-size:38px; line-height:1.2; margin:12px 0;">
+        Dr. Bhargav Reddy Isanaka
+      </h1>
+
+      <h2 style="font-size:21px; font-weight:500; margin:0 0 20px;">
+        Postdoctoral Research Fellow
+      </h2>
+
+      <p>
+        I am a Civil Engineering researcher with a PhD from
+        the Indian Institute of Technology Jammu, India.
+        Currently, I work in the Department of Aeronautical
+        and Astronautical Engineering at the University of Southampton, UK.
+      </p>
+
+      <p>
+        My research interests include solid mechanics,
+        mechanical metamaterials, lattice structures,
+        computational mechanics, structural analysis and
+        AI-assisted engineering design.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:25px;">
+        <a class="button" href="/about/">About Me</a>
+        <a class="button" href="/research/">Research</a>
+      </div>
+
+      <p style="margin-top:20px;">
+        <a href="https://scholar.google.com/citations?user=JaDDQjgAAAAJ&hl=en"
+           target="_blank" rel="noopener">
+          Google Scholar Profile →
+        </a>
+      </p>
+
+    </div>
   </div>
 </section>
 
