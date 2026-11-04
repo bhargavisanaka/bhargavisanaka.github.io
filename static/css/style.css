@@ -1,0 +1,363 @@
+
+/* =====================================
+   DR. BHARGAV REDDY ISANAKA
+   Academic Website – Main Stylesheet
+===================================== */
+
+:root {
+  --primary: #153653;
+  --secondary: #2878a8;
+  --accent: #d9a441;
+  --text: #293746;
+  --muted: #687887;
+  --background: #ffffff;
+  --light-bg: #f3f6f9;
+  --border: #e1e7ed;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Header and navigation */
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-name {
+  color: var(--primary);
+  font-size: 19px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.main-nav a,
+.dropdown-label {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.main-nav a:hover,
+.dropdown-label:hover {
+  color: var(--secondary);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 205px;
+  padding: 10px 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+}
+
+/* Main content */
+
+main {
+  min-height: 65vh;
+}
+
+.page-container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 55px 24px 75px;
+}
+
+.page-title {
+  color: var(--primary);
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+
+.page-intro {
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 35px;
+}
+
+h1, h2, h3, h4 {
+  color: var(--primary);
+  line-height: 1.35;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: 38px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+p {
+  margin: 0 0 17px;
+}
+
+ul, ol {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Section styling */
+
+.section {
+  padding: 48px 24px;
+}
+
+.section-inner {
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section-light {
+  background: var(--light-bg);
+}
+
+.section-heading {
+  font-size: 27px;
+  margin: 0 0 25px;
+  color: var(--primary);
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 12px;
+}
+
+/* Cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* Research and publication entries */
+
+.entry {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+}
+
+.entry h3 {
+  margin: 0 0 8px;
+}
+
+.entry-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: var(--secondary);
+  color: #ffffff;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #102b43;
+  color: #dce6ee;
+  text-align: center;
+  padding: 38px 24px 22px;
+}
+
+.site-footer h3 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.site-footer p {
+  color: #dce6ee;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.copyright {
+  font-size: 13px;
+  margin-top: 25px;
+  opacity: 0.8;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.profile-image {
+  width: 230px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    padding: 14px 18px;
+  }
+
+  .site-name {
+    font-size: 17px;
+  }
+
+  .main-nav {
+    gap: 10px 14px;
+  }
+
+  .main-nav a,
+  .dropdown-label {
+    font-size: 13px;
+  }
+
+  .page-container {
+    padding: 35px 18px 50px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 35px 18px;
+  }
+
+  .section-heading {
+    font-size: 23px;
+  }
+}
