@@ -2,9 +2,6 @@
 title: "Awards & Achievements"
 description: "Academic awards, fellowships, scholarships and research recognitions."
 ---
-
-# Awards & Achievements
-
 Recognition received throughout my academic and research career.
 
 ## Fellowships and Scholarships
