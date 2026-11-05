@@ -1,8 +1,8 @@
 baseURL = "https://bhargavisanaka.com/"
 languageCode = "en-gb"
-title = "Dr. Bhargav Reddy Isanaka | Academic Research"
+title = "Dr. Bhargav Reddy Isanaka"
 enableRobotsTXT = true
 
 [params]
   author = "Dr. Bhargav Reddy Isanaka"
-  description = "Academic research website of Dr. Bhargav Reddy Isanaka, Postdoctoral Research Fellow at the University of Southampton."
+  description = "Professional portfolio of Dr. Bhargav Reddy Isanaka, Researcher and currently a Research Fellow at the University of Southampton, with interests spanning advanced materials, structural engineering, computational mechanics and engineering innovation."
