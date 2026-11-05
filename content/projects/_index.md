@@ -2,9 +2,6 @@
 title: "Research Projects"
 description: "Research projects, funded investigations and engineering activities."
 ---
-
-# Research Projects
-
 My research and professional activities involve computational mechanics,
 advanced materials, structural engineering and sustainable construction.
 
@@ -14,7 +11,7 @@ advanced materials, structural engineering and sustainable construction.
 
 **Funding Agency:** DRDO – Aeronautics Research and Development Board
 
-**Project Value:** INR 59.91 Lakhs
+**Project Value:** INR 49.91 Lakhs
 
 Research on lattice-infilled annular structures for enhanced energy absorption.
 
@@ -22,7 +19,7 @@ Research on lattice-infilled annular structures for enhanced energy absorption.
 
 ### Resilient Precast Concrete Pavement Panels
 
-**Submitted to:** Border Roads Organisation, Ministry of Defence
+**Submitted to:** Border Roads Organisation, Ministry of Defence, India
 
 **Proposal Value:** INR 49.13 Lakhs
 
