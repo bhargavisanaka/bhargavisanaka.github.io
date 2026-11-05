@@ -1,9 +1,6 @@
 title: "Professional Experience"
 description: "Academic, research, teaching and industrial experience."
 ---
-
-# Professional Experience
-
 My professional journey combines academic research, university teaching, engineering practice and construction materials testing.
 
 ## 1. Academic Experience
