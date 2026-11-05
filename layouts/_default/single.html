@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="page-container">
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="page-intro">
+      {{ delimit .Params.authors ", " }}
+    </p>
+  </header>
+
+  <div class="page-content">
+    <p><strong>Publication:</strong> {{ .Params.publication }}</p>
+    <p><strong>Publication type:</strong> {{ .Params.publication_type }}</p>
+
+    {{ with .Params.doi }}
+      {{ if . }}
+        <p><strong>DOI:</strong> <a href="https://doi.org/{{ . }}" target="_blank">{{ . }}</a></p>
+      {{ end }}
+    {{ end }}
+
+    {{ with .Params.paper_url }}
+      {{ if . }}
+        <p><a href="{{ . }}" target="_blank">Read the paper →</a></p>
+      {{ end }}
+    {{ end }}
+
+    {{ .Content }}
+  </div>
+
+  <p><a href="/publications/">← Back to Publications</a></p>
+</article>
+{{ end }}
