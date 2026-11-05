@@ -361,3 +361,77 @@ img {
     font-size: 23px;
   }
 }
+
+/* Conferences, Workshops and Academic Engagement */
+
+.conference-page {
+  padding: 55px 20px 70px;
+}
+
+.conference-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.conference-content {
+  color: #333;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.conference-content h1 {
+  color: #17365d;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.conference-content h2 {
+  color: #17365d;
+  font-size: 23px;
+  margin-top: 45px;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #dce5ef;
+}
+
+.conference-content h3 {
+  color: #245b8f;
+  font-size: 18px;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.conference-content p {
+  margin-bottom: 14px;
+}
+
+.conference-content strong {
+  color: #263d57;
+}
+
+.conference-content ul {
+  padding-left: 25px;
+}
+
+.conference-content li {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .conference-page {
+    padding: 35px 16px 50px;
+  }
+
+  .conference-content h1 {
+    font-size: 25px;
+  }
+
+  .conference-content h2 {
+    font-size: 21px;
+    margin-top: 35px;
+  }
+
+  .conference-content h3 {
+    font-size: 17px;
+  }
+}
