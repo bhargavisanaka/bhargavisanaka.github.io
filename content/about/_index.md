@@ -1,4 +1,7 @@
-# About Me
+---
+title: "About Me"
+description: "Profile of Dr. Bhargav Reddy Isanaka, Research Fellow at the University of Southampton, working across computational mechanics, architected materials and structural behaviour."
+---
 
 I am an engineering researcher specialising in computational mechanics, advanced materials and structural behaviour, with research experience spanning sustainable construction materials, finite element analysis and architected materials. My work focuses on understanding how material composition, structural geometry and loading conditions influence mechanical performance, and on developing computational and data-driven approaches to improve engineering design.
 
@@ -6,6 +9,7 @@ I am currently a **Research Fellow in the Department of Aeronautical and Astrona
 
 ## Research Expertise
 
+{{< side-figure src="/images/research/slide-4.jpg" caption="Different types of 2D lattices" >}}
 My research brings together mechanics-based modelling, numerical simulation, machine learning and experimental investigations. My principal areas of interest include:
 
 - **Architected Materials and Mechanical Metamaterials:** Lattice structures, honeycomb architectures, Voronoi networks, geometry-driven mechanical performance and multifunctional design.
@@ -13,6 +17,7 @@ My research brings together mechanics-based modelling, numerical simulation, mac
 - **Machine Learning for Engineering:** Surrogate modelling, Gaussian Process Regression, Decision Trees and explainable AI for material and structural design.
 - **Structural Dynamics:** Vibration analysis, dynamic response, wave propagation and experimental characterisation of lattice-based structures.
 - **Construction and Sustainable Materials:** High-performance concrete, mineral admixtures, mechanical properties and durability.
+{{< /side-figure >}}
 
 ## Selected Research Contributions
 
