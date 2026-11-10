@@ -1,0 +1,40 @@
+# Images shown in the homepage slideshow and the Research page gallery.
+# They appear in the order listed here. To add an image, copy one block
+# (from "- src" to "fit") and change the details.
+#
+# src     = location of the image (static/images/research/... becomes /images/research/...)
+# caption = title shown below the image (also used as its description for Google)
+# fit     = "contain" shows the whole image; "cover" fills the frame and trims edges
+
+images:
+  - src: "/images/research/slide-3.jpg"
+    caption: "Broad applications of lattice structures"
+    fit: "contain"
+
+  - src: "/images/research/slide-4.jpg"
+    caption: "Different types of 2D lattices"
+    fit: "contain"
+
+  - src: "/images/research/slide-5.jpg"
+    caption: "Applications and types of lattices"
+    fit: "contain"
+
+  - src: "/images/research/slide-6.jpg"
+    caption: "Specific applications based on required energy absorption"
+    fit: "contain"
+
+  - src: "/images/research/slide-7.jpg"
+    caption: "Effect of curvature on lattice geometry"
+    fit: "contain"
+
+  - src: "/images/research/slide-8.jpg"
+    caption: "Different stochastic (Voronoi) architectures"
+    fit: "contain"
+
+  - src: "/images/research/slide-1.jpg"
+    caption: "Mode shapes of thin plates with stiffeners"
+    fit: "contain"
+
+  - src: "/images/research/slide-2.jpg"
+    caption: "Stress concentration due to curvilinear stiffeners"
+    fit: "contain"
