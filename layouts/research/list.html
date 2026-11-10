@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="page-container">
+  <div class="research-layout">
+
+    <div class="research-text page-content">
+      {{ .Content }}
+    </div>
+
+    <aside class="research-gallery" aria-label="Research images">
+      {{ partial "slideshow.html" (dict "variant" "sticky") }}
+    </aside>
+
+  </div>
+</section>
+{{ end }}
