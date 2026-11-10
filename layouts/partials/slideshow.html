@@ -1,0 +1,39 @@
+{{/* Reusable research image slideshow.
+     Images come from data/slideshow.yaml.
+     Usage: {{ partial "slideshow.html" (dict "variant" "wide") }}
+     Variants: "wide" (homepage) or "sticky" (Research page side column). */}}
+
+{{ $images := site.Data.slideshow.images }}
+{{ $variant := .variant | default "wide" }}
+
+{{ with $images }}
+<div class="slideshow slideshow--{{ $variant }}" data-interval="5000" aria-roledescription="carousel" aria-label="Research images">
+
+  <div class="slideshow-track">
+    {{ range $i, $s := $images }}
+      <figure class="slide{{ if eq $i 0 }} is-active{{ end }}{{ if eq ($s.fit | default "contain") "contain" }} slide--contain{{ end }}"
+              aria-hidden="{{ if eq $i 0 }}false{{ else }}true{{ end }}">
+        <div class="slide-media">
+          <img src="{{ $s.src }}" alt="{{ $s.alt | default $s.caption }}">
+        </div>
+        {{ with $s.caption }}
+          <figcaption>{{ . }}</figcaption>
+        {{ end }}
+      </figure>
+    {{ end }}
+  </div>
+
+  {{ if gt (len $images) 1 }}
+    <button class="slideshow-btn slideshow-prev" type="button" aria-label="Previous image">&#8249;</button>
+    <button class="slideshow-btn slideshow-next" type="button" aria-label="Next image">&#8250;</button>
+
+    <div class="slideshow-dots">
+      {{ range $i, $s := $images }}
+        <button type="button" class="slideshow-dot{{ if eq $i 0 }} is-active{{ end }}" aria-label="Show image {{ add $i 1 }}"></button>
+      {{ end }}
+    </div>
+  {{ end }}
+
+</div>
+<script src="/js/slideshow.js" defer></script>
+{{ end }}
