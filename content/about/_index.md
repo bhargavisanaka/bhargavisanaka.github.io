@@ -1,8 +1,3 @@
----
-title: "About"
-description: "Academic background, professional profile and research journey."
----
-
 # About Me
 
 I am an engineering researcher specialising in computational mechanics, advanced materials and structural behaviour, with research experience spanning sustainable construction materials, finite element analysis and architected materials. My work focuses on understanding how material composition, structural geometry and loading conditions influence mechanical performance, and on developing computational and data-driven approaches to improve engineering design.
