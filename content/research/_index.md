@@ -1,121 +1,43 @@
----
-title: "Research"
-description: "Research themes, computational methodologies and experimental investigations in advanced materials, structural mechanics and engineering design."
----
+# Research
 
-# Research Overview
+Research at the intersection of **solid mechanics, advanced materials and computational engineering**, with an emphasis on understanding and enhancing the mechanical performance of engineered structures. The central research direction explores how **geometry, material architecture and loading conditions** govern structural behaviour, and how computational modelling, machine learning and experimental investigations can be integrated to develop improved engineering solutions.
 
-My research focuses on understanding and enhancing the mechanical performance of engineered materials and structural systems through mechanics-based analysis, computational modelling, machine learning and experimental investigations.
+## Architected Materials and Mechanical Metamaterials
 
-My research interests span advanced architected materials, computational solid mechanics, structural dynamics and sustainable construction materials. A central aspect of my work is exploring how material composition, structural geometry and loading conditions can be exploited to achieve improved mechanical performance and functional behaviour.
+**Mechanical metamaterials** offer opportunities to achieve mechanical properties and functional responses that are not readily available in conventional materials. Their behaviour is governed predominantly by **internal architecture and geometry**, enabling stiffness, strength, deformation and energy absorption to be tailored through structural design.
 
-## Research Themes
+Research in this area focuses on **periodic and non-periodic lattice architectures**, including conventional *honeycombs* and *Voronoi-based cellular structures*. Particular attention is given to **curvature-driven geometric modifications**, reinforcement strategies and the influence of architectural parameters on deformation mechanisms and failure behaviour. These investigations aim to establish new design approaches for **lightweight structures with enhanced mechanical performance and controlled energy absorption**, with potential applications in aerospace, automotive and defence engineering.
 
-### 1. Architected Materials and Mechanical Metamaterials
+## Computational Mechanics and Structural Modelling
 
-My research investigates geometry-driven material design, particularly lattice and cellular architectures, to develop lightweight structures with enhanced mechanical properties.
+**Computational mechanics** provides a framework for understanding complex structural behaviour and evaluating design concepts beyond the limitations of conventional analytical approaches. **Finite element modelling and numerical simulation** form important components of this research, covering both material-level and structural-scale investigations.
 
-Key research interests include:
+Research activities include **nonlinear finite element analysis**, computational solid mechanics, stress distribution, deformation and failure prediction, and static and dynamic structural analysis. Additional investigations involve **parametric modelling, periodic boundary conditions and band-structure analysis** for understanding the mechanical and dynamic characteristics of architected materials. The integration of numerical modelling with mechanics-based interpretation supports the development and assessment of advanced structural configurations.
 
-- Periodic and non-periodic lattice architectures.
-- Honeycomb and Voronoi-based cellular structures.
-- Curved ligament geometries and geometric modification.
-- Reinforcement strategies for improved load transfer and failure resistance.
-- Stiffness, strength and energy absorption enhancement.
-- Geometry-driven deformation mechanisms and multifunctional performance.
+## Machine Learning for Engineering Design
 
-### 2. Computational Mechanics and Structural Analysis
+The increasing complexity of architected materials creates substantial computational demands, particularly when exploring large geometric design spaces and nonlinear mechanical responses. **Machine learning** offers an opportunity to complement physics-based simulations through efficient prediction, design exploration and identification of critical structural features.
 
-Computational mechanics plays a central role in understanding the behaviour of complex material and structural systems. My work involves numerical investigations of structural response under different loading conditions.
+Research in this area has explored **Gaussian Process Regression (GPR)** and **Decision Tree-based surrogate models** for predicting mechanical properties and complete stress–strain responses of lattice structures. Machine-learning-assisted identification of **critical failure regions** has also been investigated to guide selective reinforcement and improve structural performance. **Explainable artificial intelligence**, including *SHAP analysis*, provides further insight into the influence of geometric and material parameters, supporting physically interpretable and design-oriented predictions.
 
-Areas of interest include:
+## Structural Dynamics and Multifunctional Metamaterials
 
-- Finite element analysis of structural and material systems.
-- Nonlinear static and mechanical response.
-- Deformation, damage and failure mechanisms.
-- Stress distribution and load-transfer behaviour.
-- Static and free-vibration analysis of structural components.
-- Parametric modelling and numerical investigation.
+The dynamic behaviour of architected materials represents an important direction in the development of next-generation **lightweight and multifunctional structures**. Beyond their response under static loading, lattice architectures offer opportunities to manipulate **vibration characteristics, dynamic stiffness and wave propagation** through appropriate geometric and material design.
 
-### 3. Machine Learning and Data-driven Engineering Design
+Current research at the **University of Southampton** focuses on the dynamics of lattice-based mechanical metamaterials, encompassing **multifunctional material design, dynamic and wave propagation analysis, and experimental characterisation of smart structures and lattices**. The integration of computational investigations with experimental approaches provides a pathway towards understanding and tailoring the dynamic response of engineered architectures.
 
-It is interesting to integrate machine learning with computational mechanics to accelerate engineering analysis and support informed material design.
+## Sustainable Construction and Cementitious Materials
 
-My research has explored:
+An earlier research direction focused on **sustainable construction materials** and the mechanical performance of **high-performance concrete**. Investigations examined the combined use of mineral admixtures, including *fly ash, silica fume, metakaolin and ground granulated blast-furnace slag (GGBS)*, as partial replacements for cement.
 
-- Gaussian Process Regression (GPR) for surrogate modelling.
-- Decision Tree-based prediction of mechanical responses.
-- Prediction of material properties and complete stress–strain behaviour.
-- Machine-learning-assisted identification of critical failure regions.
-- Data-driven strengthening and optimisation strategies.
-- Explainable artificial intelligence using SHAP analysis.
+The work addressed the influence of different admixture combinations on **compressive strength, tensile strength and durability**, contributing to research on resource-efficient and environmentally conscious concrete technology. Further interests include alternative construction materials, concrete pavement systems and the performance of sustainable infrastructure materials.
 
-### 4. Structural Dynamics and Vibration of Metamaterials
+## Research Methodologies
 
-An important direction of my current research is the dynamic behaviour of lattice-based mechanical metamaterials. This extends my previous experience in structural analysis and architected materials towards understanding their response under dynamic loading.
+The research integrates **mechanics-based analysis, computational modelling, machine learning and experimental investigation**. Key methodological approaches include **nonlinear finite element analysis, computational solid mechanics, structural and vibration analysis, parametric modelling, periodic boundary conditions, surrogate modelling, data-driven prediction and explainable artificial intelligence**.
 
-Research interests include:
+Experimental investigations encompass **mechanical characterisation, tribological testing, microscopic examination and material testing**, alongside the validation of computational findings where appropriate. This combination of numerical and experimental approaches supports a broader understanding of material and structural behaviour.
 
-- Vibration characteristics of lattice structures.
-- Dynamic response of architected materials.
-- Wave propagation in periodic lattices.
-- Design of multifunctional mechanical metamaterials.
-- Dynamic characterisation and experimental validation.
-- Computational and experimental investigation of smart structures.
+## Research Outlook
 
-### 5. Concrete and Sustainable Construction Materials
-
-My early research focused on sustainable construction materials and the mechanical performance of high-performance concrete incorporating mineral admixtures.
-
-Research interests include:
-
-- High-performance concrete and mix design.
-- Combined use of fly ash, silica fume, metakaolin and GGBS.
-- Mechanical strength and durability characteristics.
-- Sustainable alternatives to conventional construction materials.
-- Precast concrete pavement systems.
-- Utilisation of alternative materials in construction applications.
-
-## Research Methodologies and Technical Expertise
-
-My research combines computational, analytical and experimental approaches to investigate engineering problems.
-
-### Computational and Numerical Methods
-
-- Linear and nonlinear finite element analysis.
-- Computational solid mechanics.
-- Static and dynamic structural analysis.
-- Parametric and geometry-based modelling.
-- Numerical investigation of deformation and global failure.
-- Periodic boundary conditions and band-structure analysis.
-- Surrogate modelling and data-driven prediction.
-
-### Machine Learning and Data Analysis
-
-- Gaussian Process Regression.
-- Decision Tree-based surrogate modelling.
-- Machine-learning-assisted design strategies.
-- Prediction of mechanical properties and stress–strain responses.
-- Explainable AI and SHAP-based feature interpretation.
-
-### Experimental Investigations
-
-- Mechanical characterisation of engineering materials.
-- Tribological and wear behaviour investigations.
-- Microscopic examination and material characterisation.
-- Concrete strength and durability assessment.
-- Experimental validation of computational investigations.
-
-## Research Applications
-
-The broader applications of my research include:
-
-- Lightweight aerospace and mechanical structures.
-- Energy absorption and impact mitigation systems.
-- Advanced multifunctional materials.
-- Structural vibration and dynamic response control.
-- Geometry-driven material and structural design.
-- Sustainable construction and infrastructure materials.
-
-I am interested in interdisciplinary research that connects fundamental mechanics, computational intelligence and experimental engineering to address challenges in advanced materials and structural design.
-
+The overarching research direction is towards the development of **lightweight, high-performance and multifunctional engineering systems** through the integration of advanced material architectures, computational mechanics and data-driven design. Particular opportunities lie in connecting fundamental mechanical behaviour with practical applications in **aerospace and mechanical engineering, structural dynamics, energy absorption and sustainable infrastructure**.
