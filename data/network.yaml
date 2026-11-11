@@ -1,0 +1,172 @@
+# People shown on the Academic Network & Collaborations page.
+# Groups and people appear in the order listed here.
+#
+# name       = name shown on the card
+# initials   = shown in the circle until a photo is uploaded
+# photo      = photo file name (without .jpg) in static/images/network/
+# position   = current designation and affiliation
+# text       = short description (leave out to show name and link only)
+# link       = external profile address
+# link_label = text shown for the link
+
+groups:
+
+  - title: "Academic Mentors & Professors"
+    people:
+      - name: "Dr Tanmoy Mukhopadhyay"
+        initials: "TM"
+        photo: "tanmoy-mukhopadhyay"
+        position: "Senior Lecturer, Department of Aeronautical and Astronautical Engineering, University of Southampton"
+        text: "Dr Mukhopadhyay is my present academic mentor at the University of Southampton. He is also a co-author on several of my journal articles and conference presentations, and I am grateful for his continued guidance."
+        link: "https://www.tmukhopadhyay.com/"
+        link_label: "Website"
+
+      - name: "Dr Susmita Naskar"
+        initials: "SN"
+        photo: "susmita-naskar"
+        position: "Senior Lecturer, Department of Aeronautical and Astronautical Engineering, University of Southampton"
+        text: "Dr Naskar is my present academic mentor at the University of Southampton. I value her guidance and support as I continue my research career in the department."
+        link: "https://www.snaskar.com/"
+        link_label: "Website"
+
+      - name: "Dr Rajendra Kumar Varma"
+        initials: "RV"
+        photo: "rajendra-kumar-varma"
+        position: "Associate Professor, Department of Civil Engineering, IIT Jammu"
+        text: "Dr Varma supervised my doctoral research at IIT Jammu. He is a co-author on several journal articles and conference papers arising from my PhD, and I remain grateful for his supervision and support throughout my doctoral studies."
+        link: "https://scholar.google.com/citations?user=NxhLUnAAAAAJ&hl=en"
+        link_label: "Google Scholar"
+
+      - name: "Dr Vinod Kushvaha"
+        initials: "VK"
+        photo: "vinod-kushvaha"
+        position: "Customer Account Technologist – Epitaxy, Applied Materials, USA; formerly Assistant Professor, IIT Jammu"
+        text: "Dr Kushvaha was an academic mentor during my association with IIT Jammu, where he served as an Assistant Professor. He is a co-author on many of my journal articles, book chapters and conference papers, and I am thankful for his mentorship during that period."
+        link: "https://www.linkedin.com/in/vinodkushwaha"
+        link_label: "LinkedIn"
+
+      - name: "Dr Abdul Akbar"
+        initials: "AA"
+        photo: "abdul-akbar"
+        position: "Assistant Professor, Department of Civil Engineering, NIT Calicut"
+        text: "Dr Akbar was my academic mentor during my Master's studies. He is a co-author on my first journal articles and book chapter, and I appreciate the foundation his mentorship provided early in my research career."
+        link: "https://scholar.google.com/citations?user=cTnqt9MAAAAJ&hl=en"
+        link_label: "Google Scholar"
+
+      - name: "Dr Biraja Prasad Mishra"
+        initials: "BM"
+        photo: "biraja-prasad-mishra"
+        position: "Assistant Professor, Department of Civil Engineering, C. V. Raman Global University"
+        text: "Dr Mishra has been a mentor during my academic journey. I am grateful for his guidance and encouragement."
+        link: "https://scholar.google.com/citations?user=bpjQAvAAAAAJ&hl=en"
+        link_label: "Google Scholar"
+
+      - name: "Dr N. Amaranatha Reddy"
+        initials: "AR"
+        photo: "amaranatha-reddy"
+        position: "Professor of Civil Engineering and Dean of Alumni, K.S.R.M. College of Engineering"
+        text: "Dr Amaranatha Reddy has been a mentor during my academic journey. I value the advice and encouragement he has offered over the years."
+        link: "https://scholar.google.com/citations?user=GpKtoI8AAAAJ&hl=en"
+        link_label: "Google Scholar"
+
+  - title: "Current Academic Colleagues"
+    people:
+      - name: "Dr Tzu-Han Wen"
+        initials: "TW"
+        photo: "tzu-han-wen"
+        position: "Research Fellow, Department of Aeronautical and Astronautical Engineering, University of Southampton"
+        text: "Dr Wen is a Research Fellow and a current colleague in the Department of Aeronautical and Astronautical Engineering. I appreciate the supportive working environment we share at Southampton."
+
+      - name: "Owen Zhang"
+        initials: "OZ"
+        photo: "owen-zhang"
+        position: "Postgraduate Researcher, Department of Aeronautical and Astronautical Engineering, University of Southampton"
+        text: "Owen is a postgraduate researcher and a current colleague in the department at Southampton. It is a pleasure to be part of the same research community."
+        link: "https://www.linkedin.com/in/yaowen-zhang-169305363"
+        link_label: "LinkedIn"
+
+      - name: "Aditi Sharma"
+        initials: "AS"
+        photo: "aditi-sharma"
+        position: "Postgraduate Researcher, Department of Aeronautical and Astronautical Engineering, University of Southampton"
+        text: "Aditi is a postgraduate researcher and a current colleague at Southampton. I value the exchange of ideas within our shared departmental environment."
+        link: "https://www.linkedin.com/in/aditi-sharma-09b329126"
+        link_label: "LinkedIn"
+
+      - name: "Soumyadeep Mondal"
+        initials: "SM"
+        photo: "soumyadeep-mondal"
+        position: "Postgraduate Researcher, Department of Aeronautical and Astronautical Engineering, University of Southampton"
+        text: "Soumyadeep is a postgraduate researcher in the department and a current colleague at Southampton. I am glad to work alongside him in the same academic community."
+        link: "https://www.linkedin.com/in/soumyadeep-mondal-22b9171a9"
+        link_label: "LinkedIn"
+
+  - title: "Former Academic Colleagues"
+    people:
+      - name: "Dr Aanchna Sharma"
+        initials: "AS"
+        photo: "aanchna-sharma"
+        position: "Founding Applied Scientist, Particle Factory"
+        text: "Dr Aanchna Sharma is a former academic colleague who now works as a Founding Applied Scientist at Particle Factory. I appreciate the time we spent together in academia."
+        link: "https://www.linkedin.com/in/aanchna-sharma"
+        link_label: "LinkedIn"
+
+      - name: "Dr Sristi Gupta"
+        initials: "SG"
+        photo: "sristi-gupta"
+        position: "Institute Postdoctoral Fellow (IPDF), IIT Guwahati"
+        text: "Dr Gupta is a former academic colleague and is currently an Institute Postdoctoral Fellow at IIT Guwahati. I wish her continued success in her research career."
+        link: "https://www.linkedin.com/in/sristi-gupta-ph-d-83909b14b"
+        link_label: "LinkedIn"
+
+      - name: "Dr Satyendra Singh"
+        initials: "SS"
+        photo: "satyendra-singh"
+        position: "Visiting Research Fellow, IIT Jammu"
+        text: "Dr Singh is a former academic colleague, currently a Visiting Research Fellow at IIT Jammu. I value our continued professional association."
+        link: "https://www.linkedin.com/in/dr-satyendra-singh-ph-d-348356137"
+        link_label: "LinkedIn"
+
+      - name: "Dr Abdul Haseeb Wani"
+        initials: "AW"
+        photo: "abdul-haseeb-wani"
+        link: "https://www.linkedin.com/in/dr-wani"
+        link_label: "LinkedIn"
+
+      - name: "Dr Insha Wani"
+        initials: "IW"
+        photo: "insha-wani"
+        link: "https://www.linkedin.com/in/insha-wani-1b1421b0"
+        link_label: "LinkedIn"
+
+      - name: "Swati Singh"
+        initials: "SS"
+        photo: "swati-singh"
+        position: "PhD Research Scholar, IIT Jammu"
+        text: "Swati is a former academic colleague and a PhD research scholar at IIT Jammu. I wish her every success in completing her doctoral research."
+        link: "https://www.linkedin.com/in/swati-singh-799b82216"
+        link_label: "LinkedIn"
+
+      - name: "Ashfaq Malik"
+        initials: "AM"
+        photo: "ashfaq-malik"
+        position: "PhD Research Scholar, IIT Jammu"
+        text: "Ashfaq is a former academic colleague, currently pursuing his PhD at IIT Jammu. I look forward to following the progress of his doctoral work."
+        link: "https://www.linkedin.com/in/am493"
+        link_label: "LinkedIn"
+
+      - name: "Saalim Bin Kaisar"
+        initials: "SK"
+        photo: "saalim-bin-kaisar"
+        position: "Project Staff, IIT Jammu"
+        text: "Saalim is a former academic colleague who works as Project Staff at IIT Jammu. I appreciate our time as colleagues."
+        link: "https://www.linkedin.com/in/saalim-bin-kaisar-35375a250"
+        link_label: "LinkedIn"
+
+      - name: "Gagan Sharma"
+        initials: "GS"
+        photo: "gagan-sharma"
+        position: "Tech Analyst – Manager (M2)"
+        text: "Gagan is a former academic colleague who has since moved into a technology role as a Tech Analyst – Manager. I value our continued professional connection."
+        link: "https://www.linkedin.com/in/gagan-sharma-868b6b195/"
+        link_label: "LinkedIn"
