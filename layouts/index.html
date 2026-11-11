@@ -56,13 +56,6 @@
   </div>
 </section>
 
-<!-- RESEARCH IMAGE SLIDESHOW -->
-<section class="section section-slideshow">
-  <div class="section-inner">
-    {{ partial "slideshow.html" (dict "variant" "wide") }}
-  </div>
-</section>
-
 <!-- ABOUT SECTION -->
 <section class="section section-light">
   <div class="section-inner">
@@ -89,34 +82,73 @@
   </div>
 </section>
 
-<!-- RESEARCH SECTION -->
+<!-- SLIDESHOW AND LATEST UPDATES -->
 <section class="section">
+  <div class="section-inner home-showcase">
+
+    <div class="home-showcase-slides">
+      {{ partial "slideshow.html" (dict "variant" "wide") }}
+    </div>
+
+    {{ $updates := site.Data.updates.items }}
+    <aside class="updates-panel" aria-label="Latest updates">
+      <h2 class="updates-title">Latest Updates</h2>
+
+      {{ with $updates }}
+        {{ $animate := ge (len $updates) 3 }}
+        <div class="updates-window{{ if not $animate }} is-static{{ end }}">
+          <div class="updates-track">
+            {{ range $pass := slice 1 2 }}
+              {{ if or (eq $pass 1) $animate }}
+                {{ range $updates }}
+                  <article class="update-item"{{ if eq $pass 2 }} aria-hidden="true"{{ end }}>
+                    <p class="update-date">{{ .date }}</p>
+                    <p class="update-text">{{ .text }}</p>
+                  </article>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      {{ else }}
+        <p class="update-text">Research activities, publications and professional updates will be shared here.</p>
+      {{ end }}
+
+      <a class="updates-more" href="/updates/">View all updates →</a>
+    </aside>
+
+  </div>
+</section>
+
+<!-- RESEARCH INTERESTS -->
+<section class="section section-light">
   <div class="section-inner">
     <h2 class="section-heading">Research Interests</h2>
 
-    <div class="card-grid">
+    <div class="card-grid card-grid--four">
 
       <div class="card">
         <h3>Architected Materials</h3>
         <p>
           Lattice structures, cellular metamaterials, energy absorption
-          and multifunctional lightweight structures.
+          and lightweight multifunctional design.
         </p>
       </div>
 
       <div class="card">
-        <h3>Computational Mechanics</h3>
+        <h3>Computational and Experimental Mechanics</h3>
         <p>
-          Finite element modelling, nonlinear analysis,
-          numerical simulations and failure mechanics.
+          Nonlinear finite element analysis, structural dynamics,
+          failure mechanics and experimental characterisation of
+          engineered materials.
         </p>
       </div>
 
       <div class="card">
         <h3>AI and Machine Learning</h3>
         <p>
-          Data-driven material design, machine learning-assisted
-          optimisation and predictive modelling.
+          Surrogate modelling, data-driven design and explainable AI
+          for predicting mechanical behaviour.
         </p>
       </div>
 
@@ -136,66 +168,35 @@
   </div>
 </section>
 
-<!-- CURRENT POSITION -->
-<section class="section section-light">
-  <div class="section-inner">
-    <h2 class="section-heading">Current Position</h2>
-
-    <h3>Research Fellow</h3>
-
-    <p>
-      Department of Aeronautical and Astronautical Engineering<br>
-      University of Southampton, United Kingdom
-    </p>
-
-    <a href="/experience/">Professional Experience →</a>
-  </div>
-</section>
-
-<!-- LATEST UPDATES -->
+<!-- CONNECT WITH ME (LEFT) AND CURRENT POSITION (RIGHT) -->
 <section class="section">
-  <div class="section-inner">
-    <h2 class="section-heading">Latest Updates</h2>
+  <div class="section-inner home-split">
 
-    {{ $updates := where site.RegularPages "Section" "updates" }}
+    <div>
+      <h2 class="section-heading">Connect With Me</h2>
 
-    {{ range first 5 ($updates.ByDate.Reverse) }}
-      <article class="entry">
-        <h3>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h3>
-
-        <p class="entry-meta">
-          {{ .Date.Format "2 January 2006" }}
-        </p>
-
-        <p>{{ .Summary }}</p>
-
-        <a href="{{ .RelPermalink }}">Read More →</a>
-      </article>
-    {{ else }}
       <p>
-        Research activities, publications, conference participation
-        and professional updates will be shared here.
+        I welcome discussions, collaborations and professional
+        opportunities across structural engineering, computational
+        mechanics, advanced materials and engineering innovation.
       </p>
-    {{ end }}
 
-    <a href="/updates/">View All Updates →</a>
-  </div>
-</section>
+      <a class="button" href="/contact/">Contact</a>
+    </div>
 
-<!-- CONTACT SECTION -->
-<section class="section section-light">
-  <div class="section-inner">
-    <h2 class="section-heading">Connect With Me</h2>
+    <div>
+      <h2 class="section-heading">Current Position</h2>
 
-    <p>
-      I welcome discussions, collaborations and professional
-      opportunities across structural engineering, computational
-      mechanics, advanced materials and engineering innovation.
-    </p>
+      <h3 style="margin-top:0;">Research Fellow</h3>
 
-    <a class="button" href="/contact/">Contact</a>
+      <p>
+        Department of Aeronautical and Astronautical Engineering<br>
+        University of Southampton, United Kingdom
+      </p>
+
+      <a href="/experience/">Professional Experience →</a>
+    </div>
+
   </div>
 </section>
 
