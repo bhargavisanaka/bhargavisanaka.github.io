@@ -47,3 +47,10 @@ Involved in third-party quality assurance activities associated with AIIMS Jammu
 *2016 – 2017*
 
 Professional experience in site engineering and construction-related activities.
+
+## 3. Peer Review
+
+Reviewer for the following international journals:
+
+- *Artificial Intelligence Review* (Springer)
+- *Journal of Vibration and Control* (Sage)
