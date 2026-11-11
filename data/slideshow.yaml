@@ -28,10 +28,6 @@ images:
     caption: "Effect of curvature on lattice geometry"
     fit: "contain"
 
-  - src: "/images/research/slide-8.png"
-    caption: "Different stochastic (Voronoi) architectures"
-    fit: "contain"
-
   - src: "/images/research/slide-1.jpg"
     caption: "Mode shapes of thin plates with stiffeners"
     fit: "contain"
