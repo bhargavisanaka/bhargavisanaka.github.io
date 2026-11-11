@@ -1171,3 +1171,85 @@ img {
     gap: 0 22px;
   }
 }
+
+
+/* =====================================
+   Header band: name (left) and quote (right)
+===================================== */
+
+.header-band {
+  background: #102b43;
+}
+
+.header-band-inner {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.header-band .site-name {
+  color: #ffffff;
+}
+
+.header-band .site-name:hover {
+  color: var(--accent);
+}
+
+.header-quote {
+  margin: 0;
+  text-align: right;
+  color: var(--accent);
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+/* Menu row below the band */
+.header-inner {
+  padding: 0 24px;
+}
+
+.main-nav {
+  border-top: none;
+}
+
+@media (max-width: 900px) {
+  .header-band-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 12px 18px;
+  }
+
+  .header-quote {
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .header-inner {
+    padding: 0 18px;
+  }
+}
+
+/* =====================================
+   Text fixes: narrow boxes
+===================================== */
+
+.updates-panel .update-text,
+.updates-panel p {
+  text-align: left;
+}
+
+.update-text,
+.project-card p,
+.project-details,
+.timeline-body p,
+.timeline-body li,
+.profile-text {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
