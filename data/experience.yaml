@@ -52,22 +52,26 @@ timeline:
 
 projects:
   - title: "Lightweight Multifunctionally Graded Metastructures"
-    status: "Funded project"
+    status: "Completed (2025)"
     details:
       - label: "Funding agency"
         value: "Aeronautics Research and Development Board (ARDB), DRDO"
       - label: "Project value"
         value: "INR 49.91 lakh"
-    text: "Research on lattice-infilled annular structures for enhanced energy absorption."
+      - label: "Role"
+        value: "Contributed to selected project objectives"
+    text: "The project investigated lattice-infilled annular structures for enhanced energy absorption. I contributed to several of its research objectives, and the project was completed in 2025."
 
   - title: "Resilient Precast Concrete Pavement Panels"
-    status: "Proposal submitted"
+    status: "Sanctioned"
     details:
-      - label: "Submitted to"
+      - label: "Funding agency"
         value: "Border Roads Organisation, Ministry of Defence, India"
-      - label: "Proposal value"
+      - label: "Project value"
         value: "INR 49.13 lakh"
-    text: "Research proposal addressing precast concrete pavement panels for harsh northern climates and rain-prone north-eastern regions."
+      - label: "Role"
+        value: "Proposal preparation and definition of objectives"
+    text: "The project addresses precast concrete pavement panels for harsh northern climates and rain-prone north-eastern regions. I contributed to preparing the proposal and defining its objectives together with my supervisor; following sanction, the project is being carried out by another research team."
 
 activities:
   - "Large-scale nonlinear finite element simulations."
