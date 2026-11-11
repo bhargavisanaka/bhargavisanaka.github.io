@@ -1,0 +1,52 @@
+{{ define "main" }}
+<section class="page-container">
+
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+
+  {{ range site.Data.network.groups }}
+    <section class="network-group">
+      <h2 class="section-heading">{{ .title }}</h2>
+
+      <div class="profile-grid">
+        {{ range .people }}
+          {{ $p := . }}
+          {{ $hasPhoto := false }}
+          {{ if $p.photo }}
+            {{ $hasPhoto = fileExists (printf "static/images/network/%s.jpg" $p.photo) }}
+          {{ end }}
+
+          <article class="profile-card">
+            <div class="profile-photo">
+              {{ if $hasPhoto }}
+                <img src="/images/network/{{ $p.photo }}.jpg" alt="{{ $p.name }}" loading="lazy">
+              {{ else }}
+                <span class="profile-initials" aria-hidden="true">{{ $p.initials }}</span>
+              {{ end }}
+            </div>
+
+            <div class="profile-body">
+              <h3>{{ $p.name }}</h3>
+              {{ with $p.position }}
+                <p class="profile-position">{{ . }}</p>
+              {{ end }}
+              {{ with $p.text }}
+                <p class="profile-text">{{ . }}</p>
+              {{ end }}
+              {{ with $p.link }}
+                <a class="profile-link" href="{{ . }}" target="_blank" rel="noopener">{{ $p.link_label | default "Profile" }} →</a>
+              {{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+
+</section>
+{{ end }}
