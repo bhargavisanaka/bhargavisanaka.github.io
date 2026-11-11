@@ -3,31 +3,32 @@
 # (from "- src" to "fit") and change the details.
 #
 # src     = location of the image (static/images/research/... becomes /images/research/...)
+#           The ending (.jpg or .png) must match the uploaded file exactly.
 # caption = title shown below the image (also used as its description for Google)
 # fit     = "contain" shows the whole image; "cover" fills the frame and trims edges
 
 images:
-  - src: "/images/research/slide-3.jpg"
+  - src: "/images/research/slide-3.png"
     caption: "Broad applications of lattice structures"
     fit: "contain"
 
-  - src: "/images/research/slide-4.jpg"
+  - src: "/images/research/slide-4.png"
     caption: "Different types of 2D lattices"
     fit: "contain"
 
-  - src: "/images/research/slide-5.jpg"
+  - src: "/images/research/slide-5.png"
     caption: "Applications and types of lattices"
     fit: "contain"
 
-  - src: "/images/research/slide-6.jpg"
+  - src: "/images/research/slide-6.png"
     caption: "Specific applications based on required energy absorption"
     fit: "contain"
 
-  - src: "/images/research/slide-7.jpg"
+  - src: "/images/research/slide-7.png"
     caption: "Effect of curvature on lattice geometry"
     fit: "contain"
 
-  - src: "/images/research/slide-8.jpg"
+  - src: "/images/research/slide-8.png"
     caption: "Different stochastic (Voronoi) architectures"
     fit: "contain"
 
@@ -35,6 +36,6 @@ images:
     caption: "Mode shapes of thin plates with stiffeners"
     fit: "contain"
 
-  - src: "/images/research/slide-2.jpg"
+  - src: "/images/research/slide-2.png"
     caption: "Stress concentration due to curvilinear stiffeners"
     fit: "contain"
