@@ -935,3 +935,239 @@ img {
   font-size: 13.5px;
   line-height: 1.5;
 }
+
+
+/* =====================================
+   Header: name on top, full-width menu below
+===================================== */
+
+.header-inner {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 14px 24px 0;
+}
+
+.site-name {
+  font-size: 20px;
+}
+
+.main-nav {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 18px;
+  padding: 10px 0 12px;
+  border-top: 1px solid var(--border);
+}
+
+.main-nav a {
+  padding: 2px 0;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.main-nav a.is-active {
+  color: var(--primary);
+  border-bottom-color: var(--secondary);
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    align-items: stretch;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    gap: 8px 16px;
+  }
+}
+
+/* =====================================
+   Justified text
+===================================== */
+
+.page-content p,
+.page-content li,
+.section-inner p,
+.profile-text,
+.timeline-body p,
+.timeline-body li,
+.project-card p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.card p,
+.update-text,
+.profile-position,
+.entry-meta,
+.side-figure figcaption {
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+/* =====================================
+   Research page: alternating figures
+===================================== */
+
+.side-figure-block--left {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+}
+
+.side-figure-block--left .side-figure {
+  order: -1;
+}
+
+.research-page .side-figure-block {
+  margin-top: 44px;
+  align-items: center;
+}
+
+.research-page .side-figure-text > h2:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .side-figure-block--left {
+    grid-template-columns: 1fr;
+  }
+
+  .side-figure-block--left .side-figure {
+    order: 0;
+  }
+}
+
+/* =====================================
+   Experience page
+===================================== */
+
+.exp-section {
+  margin-top: 44px;
+}
+
+.timeline {
+  margin-left: 6px;
+  border-left: 2px solid var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 24px;
+  padding: 0 0 28px 26px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--secondary);
+}
+
+.timeline-period {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.timeline-body h3 {
+  margin: 0 0 2px;
+  font-size: 18px;
+}
+
+.timeline-org {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.timeline-body ul {
+  margin: 0;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  padding: 22px 24px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: 8px;
+}
+
+.project-status {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: var(--light-bg);
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 14px;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.project-details dt {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.project-details dd {
+  margin: 0;
+}
+
+.project-card p {
+  margin: 0;
+}
+
+.exp-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+}
+
+.exp-list {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .project-grid,
+  .exp-split {
+    grid-template-columns: 1fr;
+    gap: 0 22px;
+  }
+}
