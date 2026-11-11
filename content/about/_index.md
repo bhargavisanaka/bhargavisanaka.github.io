@@ -9,7 +9,7 @@ I am currently a **Research Fellow in the Department of Aeronautical and Astrona
 
 ## Research Expertise
 
-{{< side-figure src="/images/research/slide-4.jpg" caption="Different types of 2D lattices" >}}
+{{< side-figure src="/images/research/slide-4.png" caption="Different types of 2D lattices" >}}
 My research brings together mechanics-based modelling, numerical simulation, machine learning and experimental investigations. My principal areas of interest include:
 
 - **Architected Materials and Mechanical Metamaterials:** Lattice structures, honeycomb architectures, Voronoi networks, geometry-driven mechanical performance and multifunctional design.
