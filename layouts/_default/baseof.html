@@ -16,22 +16,30 @@
       Dr. Bhargav Reddy Isanaka
     </a>
 
-    <nav class="main-nav">
-      <div class="nav-row">
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/research/">Research</a>
-        <a href="/publications/">Publications</a>
-        <a href="/experience/">Experience</a>
-        <a href="/awards/">Awards & Achievements</a>
-      </div>
-      <div class="nav-row">
-        <a href="/projects/">Projects</a>
-        <a href="/conferences/">Conferences & Workshops</a>
-        <a href="/research-group/">Academic Network & Collaborations</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/contact/">Contact</a>
-      </div>
+    {{ $current := .RelPermalink }}
+    {{ $menu := slice
+      (dict "url" "/" "name" "Home")
+      (dict "url" "/about/" "name" "About")
+      (dict "url" "/research/" "name" "Research")
+      (dict "url" "/publications/" "name" "Publications")
+      (dict "url" "/experience/" "name" "Experience")
+      (dict "url" "/awards/" "name" "Achievements")
+      (dict "url" "/conferences/" "name" "Conferences")
+      (dict "url" "/research-group/" "name" "Academic Network")
+      (dict "url" "/gallery/" "name" "Gallery")
+      (dict "url" "/contact/" "name" "Contact")
+    }}
+
+    <nav class="main-nav" aria-label="Main">
+      {{ range $menu }}
+        {{ $active := false }}
+        {{ if eq .url "/" }}
+          {{ $active = eq $current "/" }}
+        {{ else }}
+          {{ $active = hasPrefix $current .url }}
+        {{ end }}
+        <a href="{{ .url }}"{{ if $active }} class="is-active" aria-current="page"{{ end }}>{{ .name }}</a>
+      {{ end }}
     </nav>
   </div>
 </header>
