@@ -1,18 +1,20 @@
-{{/* Text on the left, image on the right.
+{{/* Text with an image beside it.
      Usage in Markdown:
-     {{< side-figure src="/images/research/slide-4.jpg" caption="..." >}}
+     {{< side-figure src="/images/research/slide-4.png" caption="..." side="right" >}}
      Markdown text here
-     {{< /side-figure >}} */}}
+     {{< /side-figure >}}
+     side = "right" (default) or "left" */}}
 
 {{ $caption := .Get "caption" }}
+{{ $side := .Get "side" | default "right" }}
 
-<div class="side-figure-block">
+<div class="side-figure-block{{ if eq $side "left" }} side-figure-block--left{{ end }}">
   <div class="side-figure-text">
     {{ .Inner | .Page.RenderString (dict "display" "block") }}
   </div>
 
   <figure class="side-figure">
-    <img src="{{ .Get "src" }}" alt="{{ .Get "alt" | default $caption }}">
+    <img src="{{ .Get "src" }}" alt="{{ .Get "alt" | default $caption }}" loading="lazy">
     {{ with $caption }}
       <figcaption>{{ . }}</figcaption>
     {{ end }}
