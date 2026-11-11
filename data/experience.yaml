@@ -1,0 +1,82 @@
+# Content for the Experience page.
+# timeline   = appointments shown as a timeline, newest first
+# projects   = research project cards
+# activities = research and technical activities list
+# reviewing  = journals you review for
+
+timeline:
+  - title: "Academic and Research Appointments"
+    entries:
+      - role: "Research Fellow"
+        organisation: "Department of Aeronautical and Astronautical Engineering, University of Southampton, United Kingdom"
+        period: "October 2026 – Present"
+        text: "Research on the dynamics and multifunctional behaviour of lattice-based mechanical metamaterials."
+
+      - role: "Early Postdoctoral Fellow"
+        organisation: "Department of Civil Engineering, Indian Institute of Technology Jammu, India"
+        period: "2026"
+
+      - role: "PhD Research Scholar and Graduate Teaching Assistant"
+        organisation: "Indian Institute of Technology Jammu, India"
+        period: "2019 – 2026"
+        text: "PhD in Civil Engineering; thesis successfully defended on 12 March 2026."
+        points:
+          - "Doctoral research in lightweight honeycomb lattice structures and energy absorption."
+          - "Teaching assistance in Mechanics of Solids, Structural Analysis, Finite Element Methods and related subjects."
+          - "Research involving computational modelling, numerical simulations and experimental validation."
+
+      - role: "Teaching Experience"
+        organisation: "Sree Venkateswara College of Engineering, India"
+        period: "2015 – 2016"
+        text: "Teaching and laboratory-related academic responsibilities."
+
+  - title: "Industrial and Professional Experience"
+    entries:
+      - role: "Quality Testing and Project Assurance"
+        organisation: "IIT Jammu – Third-Party Quality Assurance (TPQA)"
+        period: "2020 – 2022"
+        text: "Involved in third-party quality assurance activities associated with the construction of AIIMS Jammu."
+
+      - role: "Construction Materials Testing"
+        organisation: "Madanapalle Institute of Technology and Science, India"
+        period: "2018 – 2019"
+        points:
+          - "Concrete and construction materials testing."
+          - "Concrete pavement core cutting and strength assessment."
+          - "Concrete mix design in accordance with IS 10262:2009."
+
+      - role: "Site Engineering"
+        organisation: "Railway Construction Works"
+        period: "2016 – 2017"
+        text: "Professional experience in site engineering and construction-related activities."
+
+projects:
+  - title: "Lightweight Multifunctionally Graded Metastructures"
+    status: "Funded project"
+    details:
+      - label: "Funding agency"
+        value: "Aeronautics Research and Development Board (ARDB), DRDO"
+      - label: "Project value"
+        value: "INR 49.91 lakh"
+    text: "Research on lattice-infilled annular structures for enhanced energy absorption."
+
+  - title: "Resilient Precast Concrete Pavement Panels"
+    status: "Proposal submitted"
+    details:
+      - label: "Submitted to"
+        value: "Border Roads Organisation, Ministry of Defence, India"
+      - label: "Proposal value"
+        value: "INR 49.13 lakh"
+    text: "Research proposal addressing precast concrete pavement panels for harsh northern climates and rain-prone north-eastern regions."
+
+activities:
+  - "Large-scale nonlinear finite element simulations."
+  - "Parametric and surrogate modelling."
+  - "Experimental testing and validation of engineered materials."
+  - "Development and implementation of experimental testing facilities."
+
+reviewing:
+  - journal: "Artificial Intelligence Review"
+    publisher: "Springer"
+  - journal: "Journal of Vibration and Control"
+    publisher: "Sage"
