@@ -11,11 +11,20 @@
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
-    <a class="site-name" href="/">
-      Dr. Bhargav Reddy Isanaka
-    </a>
 
+  <!-- TOP BAND: name and quote -->
+  <div class="header-band">
+    <div class="header-band-inner">
+      <a class="site-name" href="/">
+        Dr. Bhargav Reddy Isanaka
+      </a>
+
+      <p class="header-quote">“Question what is known. Explore what is possible.”</p>
+    </div>
+  </div>
+
+  <!-- MENU ROW -->
+  <div class="header-inner">
     {{ $current := .RelPermalink }}
     {{ $menu := slice
       (dict "url" "/" "name" "Home")
@@ -42,6 +51,7 @@
       {{ end }}
     </nav>
   </div>
+
 </header>
 
 <main>
