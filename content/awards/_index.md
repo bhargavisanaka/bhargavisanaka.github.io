@@ -1,6 +1,6 @@
 ---
-title: "Awards & Achievements"
-description: "Academic awards, fellowships, scholarships and research recognitions."
+title: "Achievements"
+description: "Fellowships, scholarships, travel grants and academic recognition."
 ---
 Recognition received throughout my academic and research career.
 
