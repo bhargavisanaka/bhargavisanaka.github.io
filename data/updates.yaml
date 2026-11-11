@@ -1,0 +1,27 @@
+# Updates shown in the homepage panel and on the Latest Updates page.
+# List the newest first. "link" is optional.
+
+items:
+  - date: "October 2026"
+    text: "Joined the Department of Aeronautical and Astronautical Engineering at the University of Southampton as a Research Fellow."
+    link: "/experience/"
+
+  - date: "July 2026"
+    text: "New article in Composite Structures on machine intelligence-driven anti-curvature metamaterials for enhanced specific strength, stiffness and energy absorption."
+    link: "/publications/publication-1/"
+
+  - date: "January 2026"
+    text: "Invited talk on AI-driven metamaterials for advanced engineering applications at RSR Engineering College, Andhra Pradesh."
+    link: "/conferences/"
+
+  - date: "December 2025"
+    text: "Alumni guest lecture on the application of AI in civil engineering at Madanapalle Institute of Technology & Science (MITS)."
+    link: "/conferences/"
+
+  - date: "2025"
+    text: "Presented research on structural imperfections in honeycomb lattices at IMPLAST 2025, IIT Roorkee."
+    link: "/conferences/"
+
+  - date: "2024"
+    text: "Presented research at the ECCOMAS Congress 2024 in Lisbon and the EMI/PMC 2024 Conference in Chicago."
+    link: "/conferences/"
