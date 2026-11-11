@@ -1,22 +1,7 @@
 {{ define "main" }}
-<section class="page-container">
-  <div class="research-layout">
-
-    <div class="research-text page-content">
-      {{ .Content }}
-    </div>
-
-    <aside class="research-figures" aria-label="Research images">
-      {{ range site.Data.slideshow.images }}
-        <figure class="research-figure">
-          <img src="{{ .src }}" alt="{{ .alt | default .caption }}" loading="lazy">
-          {{ with .caption }}
-            <figcaption>{{ . }}</figcaption>
-          {{ end }}
-        </figure>
-      {{ end }}
-    </aside>
-
+<section class="page-container research-page">
+  <div class="page-content">
+    {{ .Content }}
   </div>
 </section>
 {{ end }}
