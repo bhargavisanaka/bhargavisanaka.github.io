@@ -6,8 +6,15 @@
       {{ .Content }}
     </div>
 
-    <aside class="research-gallery" aria-label="Research images">
-      {{ partial "slideshow.html" (dict "variant" "sticky") }}
+    <aside class="research-figures" aria-label="Research images">
+      {{ range site.Data.slideshow.images }}
+        <figure class="research-figure">
+          <img src="{{ .src }}" alt="{{ .alt | default .caption }}" loading="lazy">
+          {{ with .caption }}
+            <figcaption>{{ . }}</figcaption>
+          {{ end }}
+        </figure>
+      {{ end }}
     </aside>
 
   </div>
