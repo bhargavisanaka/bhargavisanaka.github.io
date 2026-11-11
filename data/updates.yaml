@@ -9,6 +9,14 @@ items:
   - date: "July 2026"
     text: "New article in Composite Structures on machine intelligence-driven anti-curvature metamaterials for enhanced specific strength, stiffness and energy absorption."
     link: "/publications/publication-1/"
+    
+  - date: "March 2026"
+    text: "Joined the Department of Civil Engineering at IIT Jammu as an Early Postdoctoral Fellow."
+    link: "/experience/"
+
+  - date: "March 2026"
+    text: "Successfully defended my PhD thesis in Civil Engineering at IIT Jammu."
+    link: "/experience/"
 
   - date: "January 2026"
     text: "Invited talk on AI-driven metamaterials for advanced engineering applications at RSR Engineering College, Andhra Pradesh."
@@ -18,10 +26,10 @@ items:
     text: "Alumni guest lecture on the application of AI in civil engineering at Madanapalle Institute of Technology & Science (MITS)."
     link: "/conferences/"
 
-  - date: "2025"
+  - date: "October 2025"
     text: "Presented research on structural imperfections in honeycomb lattices at IMPLAST 2025, IIT Roorkee."
     link: "/conferences/"
 
-  - date: "2024"
+  - date: "June 2024"
     text: "Presented research at the ECCOMAS Congress 2024 in Lisbon and the EMI/PMC 2024 Conference in Chicago."
     link: "/conferences/"
