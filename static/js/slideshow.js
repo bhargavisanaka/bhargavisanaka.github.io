@@ -1,6 +1,8 @@
-/* Research image slideshow
-   Cross-fades between images, loops continuously, pauses on hover,
-   and stops automatic movement for visitors who prefer reduced motion. */
+/* Research slideshow
+   - Image slides change every few seconds.
+   - Video slides play all their videos from the start and move on
+     once every video has finished.
+   - Loops continuously, pauses on hover, and respects reduced-motion settings. */
 (function () {
   var reduceMotion = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -15,9 +17,35 @@
 
     var current = 0;
     var timer = null;
+    var hovering = false;
+    var pendingAdvance = false;
     var interval = parseInt(show.getAttribute("data-interval"), 10) || 5000;
 
+    show.querySelectorAll("video").forEach(function (v) {
+      v.muted = true;
+      if (reduceMotion) v.setAttribute("controls", "");
+    });
+
+    function videosOf(slide) {
+      return slide.querySelectorAll("video");
+    }
+
+    function clearTimer() {
+      if (timer) {
+        clearTimeout(timer);
+        timer = null;
+      }
+    }
+
+    function stopVideos(slide) {
+      videosOf(slide).forEach(function (v) {
+        v.onended = null;
+        v.pause();
+      });
+    }
+
     function go(n) {
+      stopVideos(slides[current]);
       slides[current].classList.remove("is-active");
       slides[current].setAttribute("aria-hidden", "true");
       if (dots[current]) dots[current].classList.remove("is-active");
@@ -27,39 +55,94 @@
       slides[current].classList.add("is-active");
       slides[current].setAttribute("aria-hidden", "false");
       if (dots[current]) dots[current].classList.add("is-active");
+      pendingAdvance = false;
     }
 
-    function stop() {
-      if (timer) {
-        clearInterval(timer);
-        timer = null;
+    function next() {
+      go(current + 1);
+      schedule();
+    }
+
+    function finishedVideos() {
+      if (hovering) {
+        pendingAdvance = true;
+      } else {
+        next();
       }
     }
 
-    function start() {
-      if (reduceMotion) return;
-      stop();
-      timer = setInterval(function () { go(current + 1); }, interval);
+    function schedule() {
+      clearTimer();
+      var vids = videosOf(slides[current]);
+
+      if (vids.length) {
+        if (reduceMotion) return;
+        var remaining = vids.length;
+        vids.forEach(function (v) {
+          v.onended = function () {
+            remaining -= 1;
+            if (remaining <= 0) finishedVideos();
+          };
+          try { v.currentTime = 0; } catch (e) {}
+          var p = v.play();
+          if (p && p.catch) {
+            p.catch(function () {
+              /* Autoplay blocked: show the slide for a while, then move on */
+              clearTimer();
+              timer = setTimeout(next, interval * 2);
+            });
+          }
+        });
+        /* Safety net in case a video never reports that it finished */
+        timer = setTimeout(next, 120000);
+        return;
+      }
+
+      if (reduceMotion || hovering) return;
+      timer = setTimeout(next, interval);
+    }
+
+    function isVideoSlide() {
+      return videosOf(slides[current]).length > 0;
     }
 
     var prev = show.querySelector(".slideshow-prev");
-    var next = show.querySelector(".slideshow-next");
-    if (prev) prev.addEventListener("click", function () { go(current - 1); start(); });
-    if (next) next.addEventListener("click", function () { go(current + 1); start(); });
+    var nextBtn = show.querySelector(".slideshow-next");
+    if (prev) prev.addEventListener("click", function () { go(current - 1); schedule(); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { next(); });
 
     dots.forEach(function (dot, i) {
-      dot.addEventListener("click", function () { go(i); start(); });
+      dot.addEventListener("click", function () { go(i); schedule(); });
     });
 
-    show.addEventListener("mouseenter", stop);
-    show.addEventListener("mouseleave", start);
-    show.addEventListener("focusin", stop);
-    show.addEventListener("focusout", start);
+    function pause() {
+      hovering = true;
+      if (!isVideoSlide()) clearTimer();
+    }
+
+    function resume() {
+      hovering = false;
+      if (pendingAdvance) {
+        next();
+      } else if (!isVideoSlide()) {
+        schedule();
+      }
+    }
+
+    show.addEventListener("mouseenter", pause);
+    show.addEventListener("mouseleave", resume);
+    show.addEventListener("focusin", pause);
+    show.addEventListener("focusout", resume);
 
     document.addEventListener("visibilitychange", function () {
-      if (document.hidden) { stop(); } else { start(); }
+      if (document.hidden) {
+        clearTimer();
+        stopVideos(slides[current]);
+      } else {
+        schedule();
+      }
     });
 
-    start();
+    schedule();
   });
 })();
