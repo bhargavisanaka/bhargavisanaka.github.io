@@ -1,12 +1,14 @@
-{{/* Text with an image beside it.
-     Usage in Markdown:
-     {{< side-figure src="/images/research/slide-4.png" caption="..." side="right" >}}
-     Markdown text here
-     {{< /side-figure >}}
+{{/* Text with an image or video beside it.
+     Image: {{< side-figure src="/images/research/slide-4.png" caption="..." side="right" >}}
+     Video: {{< side-figure video="/videos/00.mp4" caption="..." side="left" >}}
+     Markdown text goes between the opening and closing tags.
      side = "right" (default) or "left" */}}
 
 {{ $caption := .Get "caption" }}
 {{ $side := .Get "side" | default "right" }}
+{{ $src := .Get "src" }}
+{{ $video := .Get "video" }}
+{{ $alt := .Get "alt" | default $caption }}
 
 <div class="side-figure-block{{ if eq $side "left" }} side-figure-block--left{{ end }}">
   <div class="side-figure-text">
@@ -14,7 +16,11 @@
   </div>
 
   <figure class="side-figure">
-    <img src="{{ .Get "src" }}" alt="{{ .Get "alt" | default $caption }}" loading="lazy">
+    {{ if $video }}
+      <video src="{{ $video }}" autoplay muted loop playsinline preload="metadata" aria-label="{{ $alt }}"></video>
+    {{ else }}
+      <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+    {{ end }}
     {{ with $caption }}
       <figcaption>{{ . }}</figcaption>
     {{ end }}
