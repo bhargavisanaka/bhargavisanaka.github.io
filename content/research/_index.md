@@ -45,7 +45,7 @@ An earlier research direction focused on **sustainable construction materials** 
 
 The work addressed the influence of different admixture combinations on **compressive strength, tensile strength and durability**, contributing to research on resource-efficient and environmentally conscious concrete technology. Further interests include alternative construction materials, concrete pavement systems and the performance of sustainable infrastructure materials.
 
-{{< side-figure src="/images/research/slide-6.png" caption="Specific applications based on required energy absorption" side="right" >}}
+{{< side-figure video="/videos/00.mp4" caption="Voronoi lattice generation with regularity 0 (highly irregular)" side="right" >}}
 ## Research Methodologies
 
 The research integrates **mechanics-based analysis, computational modelling, machine learning and experimental investigation**. Key methodological approaches include **nonlinear finite element analysis, computational solid mechanics, structural and vibration analysis, parametric modelling, periodic boundary conditions, surrogate modelling, data-driven prediction and explainable artificial intelligence**.
