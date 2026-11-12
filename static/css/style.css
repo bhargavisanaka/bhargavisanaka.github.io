@@ -1302,3 +1302,24 @@ img {
   border: 1px solid var(--border);
   background: #ffffff;
 }
+
+/* =====================================
+   Two images side by side in one slide
+===================================== */
+
+.slide-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+  gap: 10px;
+  background: #ffffff;
+}
+
+.slide-pair-item {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.slide-pair-item + .slide-pair-item {
+  border-left: 1px solid var(--border);
+}
