@@ -1,21 +1,37 @@
-{{/* Reusable research image slideshow.
-     Images come from data/slideshow.yaml.
-     Usage: {{ partial "slideshow.html" (dict "variant" "wide") }}
-     Variants: "wide" (homepage) or "sticky" (Research page side column). */}}
+{{/* Reusable research slideshow.
+     Slides come from data/slideshow.yaml.
+     A slide can be an image (default) or a set of videos (type: "videos").
+     Usage: {{ partial "slideshow.html" (dict "variant" "wide") }} */}}
 
 {{ $images := site.Data.slideshow.images }}
 {{ $variant := .variant | default "wide" }}
 
 {{ with $images }}
-<div class="slideshow slideshow--{{ $variant }}" data-interval="5000" aria-roledescription="carousel" aria-label="Research images">
+<div class="slideshow slideshow--{{ $variant }}" data-interval="5000" aria-roledescription="carousel" aria-label="Research images and videos">
 
   <div class="slideshow-track">
     {{ range $i, $s := $images }}
-      <figure class="slide{{ if eq $i 0 }} is-active{{ end }}{{ if eq ($s.fit | default "contain") "contain" }} slide--contain{{ end }}"
+      {{ $type := $s.type | default "image" }}
+      <figure class="slide{{ if eq $i 0 }} is-active{{ end }}{{ if eq $type "videos" }} slide--videos{{ else if eq ($s.fit | default "contain") "contain" }} slide--contain{{ end }}"
               aria-hidden="{{ if eq $i 0 }}false{{ else }}true{{ end }}">
-        <div class="slide-media">
-          <img src="{{ $s.src }}" alt="{{ $s.alt | default $s.caption }}">
-        </div>
+
+        {{ if eq $type "videos" }}
+          <div class="slide-media slide-videos">
+            {{ range $s.videos }}
+              <div class="slide-video">
+                <video src="{{ .src }}" muted playsinline preload="metadata"{{ with .label }} aria-label="{{ . }}"{{ end }}></video>
+                {{ with .label }}
+                  <span class="slide-video-label">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        {{ else }}
+          <div class="slide-media">
+            <img src="{{ $s.src }}" alt="{{ $s.alt | default $s.caption }}">
+          </div>
+        {{ end }}
+
         {{ with $s.caption }}
           <figcaption>{{ . }}</figcaption>
         {{ end }}
@@ -24,12 +40,12 @@
   </div>
 
   {{ if gt (len $images) 1 }}
-    <button class="slideshow-btn slideshow-prev" type="button" aria-label="Previous image">&#8249;</button>
-    <button class="slideshow-btn slideshow-next" type="button" aria-label="Next image">&#8250;</button>
+    <button class="slideshow-btn slideshow-prev" type="button" aria-label="Previous slide">&#8249;</button>
+    <button class="slideshow-btn slideshow-next" type="button" aria-label="Next slide">&#8250;</button>
 
     <div class="slideshow-dots">
       {{ range $i, $s := $images }}
-        <button type="button" class="slideshow-dot{{ if eq $i 0 }} is-active{{ end }}" aria-label="Show image {{ add $i 1 }}"></button>
+        <button type="button" class="slideshow-dot{{ if eq $i 0 }} is-active{{ end }}" aria-label="Show slide {{ add $i 1 }}"></button>
       {{ end }}
     </div>
   {{ end }}
