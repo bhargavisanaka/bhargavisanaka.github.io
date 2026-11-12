@@ -1,11 +1,14 @@
-# Images shown in the homepage slideshow and the Research page gallery.
-# They appear in the order listed here. To add an image, copy one block
-# (from "- src" to "fit") and change the details.
+# Slides shown in the homepage slideshow, in this order.
 #
-# src     = location of the image (static/images/research/... becomes /images/research/...)
-#           The ending (.jpg or .png) must match the uploaded file exactly.
-# caption = title shown below the image (also used as its description for Google)
-# fit     = "contain" shows the whole image; "cover" fills the frame and trims edges
+# Image slide:
+#   src     = location of the image (static/images/... becomes /images/...)
+#   caption = title shown below the image
+#   fit     = "contain" shows the whole image; "cover" fills the frame
+#
+# Video slide (videos play side by side; the slideshow moves on when all have finished):
+#   type    = "videos"
+#   videos  = list of videos, each with src (static/videos/... becomes /videos/...) and label
+#   caption = title shown below the videos
 
 images:
   - src: "/images/research/slide-3.png"
@@ -19,6 +22,14 @@ images:
   - src: "/images/research/slide-5.png"
     caption: "Applications and types of lattices"
     fit: "contain"
+
+  - type: "videos"
+    caption: "Voronoi lattice generation: regularity 0 (highly irregular) and 0.5 (moderately irregular)"
+    videos:
+      - src: "/videos/00.mp4"
+        label: "Regularity 0"
+      - src: "/videos/0_5.mp4"
+        label: "Regularity 0.5"
 
   - src: "/images/research/slide-6.png"
     caption: "Specific applications based on required energy absorption"
