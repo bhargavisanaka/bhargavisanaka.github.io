@@ -1,6 +1,9 @@
 {{/* Reusable research slideshow.
      Slides come from data/slideshow.yaml.
-     A slide can be an image (default) or a set of videos (type: "videos").
+     Slide types:
+       image (default) - one image
+       pair            - two images side by side
+       videos          - videos side by side; moves on when all have finished
      Usage: {{ partial "slideshow.html" (dict "variant" "wide") }} */}}
 
 {{ $images := site.Data.slideshow.images }}
@@ -12,7 +15,7 @@
   <div class="slideshow-track">
     {{ range $i, $s := $images }}
       {{ $type := $s.type | default "image" }}
-      <figure class="slide{{ if eq $i 0 }} is-active{{ end }}{{ if eq $type "videos" }} slide--videos{{ else if eq ($s.fit | default "contain") "contain" }} slide--contain{{ end }}"
+      <figure class="slide{{ if eq $i 0 }} is-active{{ end }}{{ if eq $type "videos" }} slide--videos{{ else if eq $type "pair" }} slide--contain slide--pair{{ else if eq ($s.fit | default "contain") "contain" }} slide--contain{{ end }}"
               aria-hidden="{{ if eq $i 0 }}false{{ else }}true{{ end }}">
 
         {{ if eq $type "videos" }}
@@ -26,6 +29,16 @@
               </div>
             {{ end }}
           </div>
+
+        {{ else if eq $type "pair" }}
+          <div class="slide-media slide-pair">
+            {{ range $s.pictures }}
+              <div class="slide-pair-item">
+                <img src="{{ .src }}" alt="{{ .alt }}">
+              </div>
+            {{ end }}
+          </div>
+
         {{ else }}
           <div class="slide-media">
             <img src="{{ $s.src }}" alt="{{ $s.alt | default $s.caption }}">
