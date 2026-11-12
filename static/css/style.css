@@ -1253,3 +1253,52 @@ img {
   -webkit-hyphens: manual;
   hyphens: manual;
 }
+
+/* =====================================
+   Video slides and research videos
+===================================== */
+
+.slide-videos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.slide-video {
+  position: relative;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #ffffff;
+}
+
+.slide-video-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: rgba(16, 43, 67, 0.78);
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.side-figure video {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
